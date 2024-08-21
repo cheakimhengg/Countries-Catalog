@@ -20,7 +20,7 @@ This project is a Countries Catalog application built using React. The applicati
    - Sort the countries by their name in ascending or descending order.
 
 4. **Pagination:**
-   - Display 25 countries per page with the ability to navigate between pages.
+   - Display 25 page per row with the ability to navigate between pages.
 
 5. **Detailed Information Modal:**
    - When a user clicks on a country name, a modal pops up displaying all the detailed information about that country.
