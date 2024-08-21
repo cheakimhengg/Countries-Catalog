@@ -12,9 +12,10 @@ function App() {
   const [filteredCountries, setFilteredCountries] = useState([]);
   const [isAscending, setIsAscending] = useState(true); // Default sorting order
   const [currentPage, setCurrentPage] = useState(1); // Current page number
-  const [countriesPerPage] = useState(36); // Number of countries per page
+  const [countriesPerPage, setCountriesPerPage] = useState(100); // Number of countries per page
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   // Fetch data from API
   useEffect(() => {
@@ -44,6 +45,31 @@ function App() {
 
     setFilteredCountries(results);
   }, [searchCountry, countries, isAscending]);
+
+  //handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  //handle grid column change
+  useEffect(() => {
+    if (screenWidth >= 1024) {
+      setCountriesPerPage(100);
+    } else if (screenWidth >= 768) {
+      setCountriesPerPage(75);
+    } else {
+      setCountriesPerPage(50);
+    }
+    setCurrentPage(1);
+  }, [screenWidth]);
 
   // Toggle sorting order
   const handleSortToggle = () => {
