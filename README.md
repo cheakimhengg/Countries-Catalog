@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Countries Catalog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Countries Catalog application built using React. The application fetches country-related data from the [REST Countries API](https://restcountries.com/) and displays it in a user-friendly format. Users can search, sort, and paginate through the country data, and they can also view detailed information about each country in a modal popup.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **Country Information Display:**
+   - **Flags:** Display the country's flag (PNG format).
+   - **Country Name:** Display the official name of the country.
+   - **2-character Country Code:** Display the two-character country code (CCA2).
+   - **3-character Country Code:** Display the three-character country code (CCA3).
+   - **Native Country Name:** Display the native name(s) of the country.
+   - **Alternative Country Name(s):** Display alternative spellings of the country name.
+   - **Country Calling Codes:** Display the country's calling code(s).
 
-### `npm start`
+2. **Search:**
+   - Implemented fuzzy search functionality that allows users to search for a country by its name.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Sorting:**
+   - Sort the countries by their name in ascending or descending order.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Pagination:**
+   - Display 25 countries per page with the ability to navigate between pages.
 
-### `npm test`
+5. **Detailed Information Modal:**
+   - When a user clicks on a country name, a modal pops up displaying all the detailed information about that country.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run this project locally, you need to have Node.js and npm (Node Package Manager) installed on your machine. You can download Node.js from [here](https://nodejs.org/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/your-username/countries-catalog.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Navigate to the project directory:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd countries-catalog
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Install the dependencies:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+### Running the Project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Start the development server:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   This command will start the development server and open the application in your default web browser. The app will be running at `http://localhost:3000/`.
