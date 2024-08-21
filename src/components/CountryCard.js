@@ -16,11 +16,13 @@ function CountryCard({ country, onClick }) {
           className="w-full rounded-t-md sm:h-40 h-28 object-fill"
         />
       </div>
-      <div className="flex flex-col p-4 flex-grow">
+      <div className="flex flex-col sm:p-4 p-2.5 flex-grow">
         <h3 className="font-bold my-2 text-lg ">{country.name.official}</h3>
         <div className="flex flex-row text-sm">
-          <p className="font-semibold text-gray-800">Country Code:</p>
-          <p className="pl-1 text-gray-500">
+          <p className="font-semibold text-gray-800  whitespace-nowrap">
+            Country Code:
+          </p>
+          <p className="pl-1 text-gray-500 truncate">
             {country.cca2}, {country.cca3}
           </p>
         </div>
@@ -39,7 +41,9 @@ function CountryCard({ country, onClick }) {
           </p>
         </div>
         <div className="flex flex-row text-sm">
-          <p className="font-semibold text-gray-800">Calling Codes:</p>
+          <p className="font-semibold text-gray-800 whitespace-nowrap">
+            Calling Codes:
+          </p>
           <p className="pl-1 text-gray-500 truncate">
             {country.idd.root}
             {country.idd.suffixes && country.idd.suffixes.length > 0
@@ -48,7 +52,7 @@ function CountryCard({ country, onClick }) {
           </p>
         </div>
         {/* This div will push the "Read More" to the bottom */}
-        <div className="flex-grow"></div>
+        <div className="flex-grow pt-1"></div>
         <div className="flex flex-row text-sm justify-end align-bottom items-end">
           <MoveRight className="text-[#6466ef]" />
         </div>

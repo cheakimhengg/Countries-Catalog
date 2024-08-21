@@ -27,7 +27,7 @@ function CountryModal({ country, onClose }) {
       className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
       onClick={handleOutsideClick}
     >
-      <div className="bg-white p-10 rounded-lg w-[38.5rem] md:mr-4 md:ml-0 mr-10 ml-6 max-h-[90vh] overflow-y-auto">
+      <div className="bg-white sm:p-10 p-8 rounded-lg w-[38.5rem] md:mr-4 md:ml-0 mr-10 ml-6 max-h-[90vh] overflow-y-auto">
         <div className="w-full flex flex-col justify-center items-center gap-2 mb-8">
           <img
             src={country?.flags?.png || "/default-flag.png"}
@@ -117,13 +117,13 @@ function CountryModal({ country, onClose }) {
               {country?.timezones ? country.timezones.join(", ") : "N/A"}
             </p>
           </div>
-          <div className="flex flex-row text-base">
+          <div className="flex flex-row text-base w-full">
             <p className="font-semibold whitespace-nowrap">Google Maps:</p>
             <a
               href={country?.maps.googleMaps || "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className="pl-1 text-[#6466ef] underline"
+              className="pl-1 text-[#6466ef] underline break-all"
             >
               {country?.maps.googleMaps ? country.maps.googleMaps : "N/A"}
             </a>
